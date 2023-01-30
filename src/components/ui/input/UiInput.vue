@@ -33,13 +33,13 @@
     const props = defineProps({
         id: String,
         label: String,
-        type: String,
+        type: { type: String, default: 'text' },
         modelValue: [String, Number],
         required: Boolean,
         error: String
     });
 
-    const emit = defineEmits(['update:modelValue']);
+    const emit = defineEmits(['update:modelValue', 'onChange']);
 
     const onChange = (event) => {
         let value = event.target.value;
@@ -47,10 +47,11 @@
             value = Number(value);
         }
         emit('update:modelValue', value);
+        emit('onChange', value);
     };
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
     .form-input {
         display: flex;
         flex-direction: column;

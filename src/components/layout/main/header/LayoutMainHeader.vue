@@ -8,7 +8,7 @@
                 hightlight-active-link
             />
 
-            <ui-input v-model="val" />
+            <ui-search />
             
         </app-container>
     </header>
@@ -18,8 +18,8 @@
     import UiLogo from '@/components/ui/logo/UiLogo.vue';
     import LayoutMainNav from '@/components/layout/main/nav/LayoutMainNav.vue';
     import AppContainer from '@/components/app/container/AppContainer.vue';
-    import UiInput from '@/components/ui/input/UiInput.vue';
     import { ref } from 'vue';
+    import UiSearch from '@/components/ui/search/UiSearch.vue';
 
     export default {
         name: 'LayoutMainHeader',
@@ -27,8 +27,8 @@
             UiLogo,
             LayoutMainNav,
             AppContainer,
-            UiInput,
-        }   
+            UiSearch,
+        }          
     }
 </script>
 
