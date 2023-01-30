@@ -21,5 +21,6 @@ export default {
 		font-family: Merriweather;
 		font-weight: 700;
 		// font-weight: 300;
+		color: $primary;
 	}
 </style>
