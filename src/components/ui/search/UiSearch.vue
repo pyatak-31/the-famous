@@ -1,6 +1,10 @@
 <template>
     <div class="search-panel">
-        <ui-input v-model="searchValue" />
+        <ui-input
+            class="search-panel__field"
+            v-model="searchValue"
+        />
+        
         <ui-button>
             <!-- <template #left-icon>
                 <ui-icon name="cart" />
@@ -27,5 +31,12 @@
 </script>
 
 <style lang="scss" scoped>
+    .search-panel {
+        display: flex;
+        width: 415px;
 
+        &__field {
+            flex: 1 0 200px;
+        }
+    }
 </style>
