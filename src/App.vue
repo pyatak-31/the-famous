@@ -18,9 +18,6 @@ export default {
 
 <style lang="scss">
 	.text {
-		font-family: Merriweather;
-		font-weight: 700;
-		// font-weight: 300;
-		color: $primary;
+		@include font(red, 20px, 25px, 700);
 	}
 </style>
