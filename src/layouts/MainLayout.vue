@@ -1,27 +1,36 @@
 <template>
-    <layout-main-header />
-
-    <div class="a">
-        <router-view></router-view>
+    <div class="main-layout">
+        <layout-main-header />
+    
+        <main class="main-layout__main">
+            <router-view></router-view>
+        </main>
+    
+        <layout-main-footer />
     </div>
 </template>
 
 <script>
-import { defineAsyncComponent } from '@vue/runtime-core'
-import LayoutMainHeader from '@/components/layout/main/header/LayoutMainHeader.vue'
+    import LayoutMainHeader from '@/components/layout/main/header/LayoutMainHeader.vue'
+    import LayoutMainFooter from '@/components/layout/main/footer/LayoutMainFooter.vue'
+    
     export default {
         name: 'MainLayout',
         components: {
-            // LayoutMainHeader: defineAsyncComponent(() => import('@/components/layout/main/header/LayoutMainHeader.vue'))
-                LayoutMainHeader,
+            LayoutMainHeader,
+            LayoutMainFooter,
         }   
     }
 </script>
 
-<script setup>
+<style lang="scss">
+    .main-layout {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
 
-</script>
-
-<style >
-    
+        &__main {
+            flex: 1;
+        }
+    }
 </style>

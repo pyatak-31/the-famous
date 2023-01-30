@@ -8,7 +8,10 @@
             >
                 <router-link
                     class="main-nav__link"
-                    :class="{ 'main-nav__link--active': hightlightActiveLink }"
+                    :class="[
+                        { 'main-nav__link--active': hightlightActiveLink },
+                        { 'main-nav__link--footer': footer },
+                    ]"
                     :to="to"
                 >{{ name }}</router-link>
             </li>
@@ -16,9 +19,12 @@
     </nav>
 </template>
 
+<script>export default { name: 'LayoutMainNav' }</script>
+
 <script setup>
     const props = defineProps({
-        hightlightActiveLink: Boolean
+        hightlightActiveLink: Boolean,
+        footer: Boolean
     });
 
     const links = [
@@ -44,9 +50,19 @@
         &__link {
             @include font($dark, 14px, 21px, 400);
             white-space: nowrap;
+            transition: color .3s;
+
+            &:hover,
+            &:focus {
+                color: $grey-1;
+            }
 
             &--active.active {
                 color: $grey-1;
+            }
+
+            &--footer {
+                color: $grey-4;
             }
         }
     }

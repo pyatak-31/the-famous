@@ -10,5 +10,9 @@ export const useCart = () => {
         store.commit('cart/addToCart', id);
     };
 
-    return { cartCount, addToCart };
+    const removeFromCart = (id) => {
+        store.commit('cart/removeFromCart', id);
+    };
+
+    return { cartCount, addToCart, removeFromCart };
 };
