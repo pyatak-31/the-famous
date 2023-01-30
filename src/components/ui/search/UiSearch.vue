@@ -4,8 +4,8 @@
             class="search-panel__field"
             v-model="searchValue"
         />
-        
-        <ui-button>
+
+        <ui-button @on-click="toSearch">
             <!-- <template #left-icon>
                 <ui-icon name="cart" />
             </template> -->
@@ -27,13 +27,18 @@
 </script>
 
 <script setup>
-    const searchValue = '';
+    const emit = defineEmits(['toSearch']);
+
+    const searchValue = ref();
+
+    const toSearch = () => {
+        emit('toSearch', searchValue.value)
+    };
 </script>
 
 <style lang="scss" scoped>
     .search-panel {
         display: flex;
-        width: 415px;
 
         &__field {
             flex: 1 0 200px;

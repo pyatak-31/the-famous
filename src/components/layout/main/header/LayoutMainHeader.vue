@@ -8,7 +8,7 @@
                 hightlight-active-link
             />
 
-            <ui-search />
+            <module-catalog-search class="main-header__search" />
             
         </app-container>
     </header>
@@ -19,7 +19,7 @@
     import LayoutMainNav from '@/components/layout/main/nav/LayoutMainNav.vue';
     import AppContainer from '@/components/app/container/AppContainer.vue';
     import { ref } from 'vue';
-    import UiSearch from '@/components/ui/search/UiSearch.vue';
+    import ModuleCatalogSearch from '@/components/module/catalog/ModuleCatalogSearch.vue';
 
     export default {
         name: 'LayoutMainHeader',
@@ -27,7 +27,7 @@
             UiLogo,
             LayoutMainNav,
             AppContainer,
-            UiSearch,
+            ModuleCatalogSearch,
         }          
     }
 </script>
@@ -48,7 +48,13 @@
         }
 
         &__nav {
+            margin-right: 30px;
             margin-left: 48px;
+        }
+
+        &__search {
+            width: 415px;
+            margin-left: auto;
         }
     }
 </style>
