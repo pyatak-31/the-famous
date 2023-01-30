@@ -1,5 +1,5 @@
 <template>
-    <ui-search @to-search="log" />
+    <ui-search @to-search="filterByName" />
 </template>
 
 <script>
@@ -11,11 +11,6 @@
 </script>
 
 <script setup>
-    const log = (v) => {
-        console.log(v);
-    }
+    import { useCatalog } from '@/composables/useCatalog';
+    const { filterByName } = useCatalog();
 </script>
-
-<style lang="scss" scoped>
-
-</style>
