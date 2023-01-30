@@ -2,18 +2,20 @@ import { createRouter, createWebHistory } from 'vue-router'
 
 const routes = [
   {
-    path: '/',
-    name: 'main',
+    path: '/catalog',
+    name: 'catalog',
     meta: { layout: 'Main' },
-    component: () => import(/* webpackChunkName: "home" */ '@/views/MainView.vue')
+    component: () => import(/* webpackChunkName: "catalog" */ '@/views/CatalogView.vue')
   },
  
-  { path: '/:notFound(.*)', redirect: '/' },
+  { path: '/:notFound(.*)', redirect: '/catalog' },
 ]
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
-  routes
+  routes,
+  linkActiveClass: "active",
+  linkExactActiveClass: "active",
 })
 
 export default router

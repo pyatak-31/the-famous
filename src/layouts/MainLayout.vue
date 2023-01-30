@@ -1,21 +1,27 @@
 <template>
-    <nav>
-		<router-link to="/">Home</router-link> |
-		<router-link to="/about">About</router-link>
-	</nav>
+    <layout-main-header />
 
     <div class="a">
         <router-view></router-view>
     </div>
 </template>
 
-<script setup lang="ts">
+<script>
+import { defineAsyncComponent } from '@vue/runtime-core'
+import LayoutMainHeader from '@/components/layout/main/header/LayoutMainHeader.vue'
+    export default {
+        name: 'MainLayout',
+        components: {
+            // LayoutMainHeader: defineAsyncComponent(() => import('@/components/layout/main/header/LayoutMainHeader.vue'))
+                LayoutMainHeader,
+        }   
+    }
+</script>
+
+<script setup>
 
 </script>
 
 <style >
-    .a {
-        min-height: 100vh;
-        background-color: rgb(128, 95, 95);
-    }
+    
 </style>

@@ -1,5 +1,8 @@
 <template>
-	<component :is="layout" v-if="layout"></component>
+	<component
+		:is="layout"
+		v-if="layout"
+	/>
 </template>
 
 <script setup>
