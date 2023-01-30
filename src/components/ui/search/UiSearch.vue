@@ -1,7 +1,12 @@
 <template>
     <div class="search-panel">
         <ui-input v-model="searchValue" />
-        <ui-button>132</ui-button>
+        <ui-button>
+            <!-- <template #left-icon>
+                <ui-icon name="cart" />
+            </template> -->
+            Найти
+        </ui-button>
     </div>
 </template>
 
@@ -9,10 +14,11 @@
     import { ref } from 'vue';
     import UiInput from '../input/UiInput.vue'
     import UiButton from '../button/UiButton.vue';
+    import UiIcon from '../icon/UiIcon.vue';
     
     export default {
         name: 'UiSearch',
-        components: { UiInput, UiButton },
+        components: { UiInput, UiButton, UiIcon },
     }
 </script>
 
