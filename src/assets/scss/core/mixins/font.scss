@@ -1,6 +1,10 @@
 // === FONT ===
-@mixin font($color, $font-size, $line-height, $font-weight) {
-    font-family: $font-family-merriweather;
+@mixin font($color, $font-size, $line-height, $font-weight, $font-family: false) {
+    @if $font-family == 'Inter' {
+        font-family: $font-family-inter;
+    } @else {
+        font-family: $font-family-merriweather;
+    }
    
     @if $color != '' {
         color: $color;

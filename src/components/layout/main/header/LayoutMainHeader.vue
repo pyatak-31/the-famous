@@ -10,6 +10,7 @@
 
             <module-catalog-search class="main-header__search" />
             
+            <module-cart-header-link class="main-header__cart" />
         </app-container>
     </header>
 </template>
@@ -18,8 +19,9 @@
     import UiLogo from '@/components/ui/logo/UiLogo.vue';
     import LayoutMainNav from '@/components/layout/main/nav/LayoutMainNav.vue';
     import AppContainer from '@/components/app/container/AppContainer.vue';
-    import { ref } from 'vue';
     import ModuleCatalogSearch from '@/components/module/catalog/ModuleCatalogSearch.vue';
+    import ModuleCartHeaderLink from '@/components/module/cart/ModuleCartHeaderLink.vue';
+    import { ref } from 'vue';
 
     export default {
         name: 'LayoutMainHeader',
@@ -28,6 +30,7 @@
             LayoutMainNav,
             AppContainer,
             ModuleCatalogSearch,
+            ModuleCartHeaderLink,
         }          
     }
 </script>
@@ -55,6 +58,10 @@
         &__search {
             width: 415px;
             margin-left: auto;
+        }
+
+        &__cart {
+            margin-left: 33px;
         }
     }
 </style>

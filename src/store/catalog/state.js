@@ -1,6 +1,7 @@
 export default ({
     list: [
         {
+            id: 'goods_1',
             name: 'Рождение Венеры',
             author: 'Сандро Боттичелли',
             price: 1000000,
@@ -9,6 +10,7 @@ export default ({
         },
 
         {
+            id: 'goods_2',
             name: 'Тайная вечеря',
             author: 'Леонардо да Винчи',
             price: 3000000,
@@ -16,6 +18,7 @@ export default ({
         },
 
         {
+            id: 'goods_3',
             name: 'Сотворение Адама',
             author: 'Микеланджело',
             price: 5000000,
@@ -24,6 +27,7 @@ export default ({
         },
 
         {
+            id: 'goods_4',
             name: 'Урок анатомии',
             author: 'Рембрандт',
             image: 'rembrandt',

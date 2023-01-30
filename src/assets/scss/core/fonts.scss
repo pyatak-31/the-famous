@@ -22,3 +22,11 @@
         url('@/assets/fonts/Merriweather-Bold/Merriweather-Bold.ttf') format('truetype');
     font-weight: 700;
 }
+
+@font-face {
+    font-family: 'Inter';
+    font-display: swap;
+    src: url('@/assets/fonts/Inter-Medium/Inter-Medium.woff2') format('woff2'),
+        url('@/assets/fonts/Inter-Medium/Inter-Medium.ttf') format('truetype');
+    font-weight: 500;
+}
