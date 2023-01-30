@@ -1,10 +1,17 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+	<component :is="layout" v-if="layout"></component>
 </template>
+
+<script setup>
+	import { computed, defineAsyncComponent } from 'vue';
+	import { useRoute } from 'vue-router';
+
+	const route = useRoute();
+	const layout = computed(() => {
+		if(route.meta.layout)
+		return defineAsyncComponent(() => import(`./layouts/${ route.meta.layout }Layout.vue`));
+	});
+</script>
 
 <style lang="scss">
 
