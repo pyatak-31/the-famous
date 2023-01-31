@@ -35,10 +35,6 @@
     }
 </script>
 
-<script setup>
-    const val = ref()
-</script>
-
 <style lang="scss" scoped>
     .main-header {
         padding-top: 24px;
@@ -48,6 +44,14 @@
         &__container {
             display: flex;
             align-items: center;
+            flex-direction: column;
+            flex-wrap: wrap;
+            gap: 20px;   
+
+            @media (min-width: 1050px) {
+                flex-direction: row;
+                gap: 0;
+            }
         }
 
         &__nav {
@@ -56,12 +60,16 @@
         }
 
         &__search {
-            width: 415px;
-            margin-left: auto;
+            @media (min-width: 1050px) {
+                width: 415px;
+                margin-left: auto;
+            }
         }
 
         &__cart {
-            margin-left: 33px;
+            @media (min-width: 1050px) {
+                margin-left: 33px;
+            }
         }
     }
 </style>

@@ -39,6 +39,13 @@
         &__container {
             display: flex;
             align-items: center;
+            flex-direction: column;
+            gap: 20px;
+
+            @media (min-width: $lg) {
+                flex-direction: row;
+                gap: 0;
+            }
         }
 
         &__nav {
@@ -47,7 +54,9 @@
         }
 
         &__contacts {
-            margin-left: auto;
+            @media (min-width: $lg) {
+                margin-left: auto;
+            }
         }
     }
 </style>

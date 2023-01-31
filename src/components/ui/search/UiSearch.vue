@@ -17,18 +17,17 @@
 <script>
     import { ref } from 'vue';
     import UiButton from '../button/UiButton.vue';
-    import UiIcon from '../icon/UiIcon.vue';
     
     export default {
         name: 'UiSearch',
-        components: { UiButton, UiIcon },
+        components: { UiButton },
     }
 </script>
 
 <script setup>
     const emit = defineEmits(['toSearch']);
 
-    const searchValue = ref();
+    const searchValue = ref('');
 
     const toSearch = () => {
         emit('toSearch', searchValue.value)
@@ -40,7 +39,7 @@
         display: flex;
 
         &__field {
-            flex: 1 0 200px;
+            flex: 1;
             width: 100%;
             padding: 13px 16px;
             @include font($dark, 14px, 20px, 400);
@@ -48,6 +47,10 @@
             border-bottom: 1px solid $grey-2;
             border-left: 1px solid $grey-2;
             transition: border-color .3s;
+
+            @media (min-width: $md) {
+                flex: 1 0 200px;
+            }
 
             &::placeholder {
                 color: $grey-1;

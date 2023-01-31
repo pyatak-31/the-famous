@@ -9,7 +9,7 @@
 <style lang="scss" scoped>
     .container {
         width: 100%;
-        max-width: 1245px;
+        max-width: $container-width;
         margin: 0 auto; 
         padding-right: 15px;
         padding-left: 15px;

@@ -34,14 +34,15 @@
     }
 </script>
 
-<script setup>
-
-</script>
-
 <style lang="scss" scoped>
     .contacts {
         display: flex;
+        flex-wrap: wrap;
         gap: 40px;
+
+        // @media (min-width: 1020px) {
+            
+        // }
 
         // &__item {}
 

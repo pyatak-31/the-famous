@@ -11,7 +11,6 @@ export const useCart = () => {
     const addToCart = async (id) => {
         isLoading.value = true;
         const answer = await store.dispatch('cart/addToCart', id);
-        console.log(answer);
         isLoading.value = false;
         alert(answer);
     };
@@ -19,7 +18,6 @@ export const useCart = () => {
     const removeFromCart = async (id) => {
         isLoading.value = true;
         const answer = await store.dispatch('cart/removeFromCart', id);
-        console.log(answer);
         isLoading.value = false;
         alert(answer);
     };

@@ -62,11 +62,10 @@
 
 <script>
     import UiTitle from '@/components/ui/title/UiTitle.vue';
-    
     import UiButton from '@/components/ui/button/UiButton.vue';
     import UiPrice from '@/components/ui/price/UiPrice.vue';
-    import { useCart } from '@/composables/useCart';
     import UiIcon from '@/components/ui/icon/UiIcon.vue';
+    import { useCart } from '@/composables/useCart';
 
     export default {
         name: 'ModuleCatalogCard',

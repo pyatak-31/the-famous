@@ -7,7 +7,7 @@ export const useCatalog = () => {
     const catalogList = computed(() => store.getters['catalog/getListFilteredByName']);
 
     const filterByName = (filterValue) => {
-        store.commit('catalog/setFilterValue', filterValue)
+        store.commit('catalog/setFilterValue', filterValue);
     };
 
     return { catalogList, filterByName };

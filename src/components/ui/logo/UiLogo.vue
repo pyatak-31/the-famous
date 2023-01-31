@@ -1,20 +1,13 @@
 <template>
     <div class="logo">
         <img
-            src="@/assets/images/logo-dark.jpg"
-            alt="Логотип"
-            v-if="dark"
-        >
-        
-        <img
-            src="@/assets/images/logo.jpg"
-            alt="Логотип"
-            v-else
+            :src="require(`@/assets/images/${ dark ? 'logo-dark' : 'logo' }.jpg`)"
+            alt="Картина"
         >
     </div>
 </template>
 
-<script>export default { name: 'LayoutMainHeader' };</script>
+<script>export default { name: 'UiLogo' };</script>
 
 <script setup>
     const props = defineProps({ dark: { type: Boolean, default: false }});

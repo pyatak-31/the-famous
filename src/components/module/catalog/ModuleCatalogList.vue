@@ -17,8 +17,8 @@
 </template>
 
 <script>
-    import { useCatalog } from '@/composables/useCatalog';
     import ModuleCatalogCard from './ModuleCatalogCard.vue';
+    import { useCatalog } from '@/composables/useCatalog';
 
     export default {
         name: 'ModuleCatalogList',

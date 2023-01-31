@@ -1,5 +1,8 @@
 <template>
-    <ui-search placeholder="Поиск по названию картины" @to-search="filterByName" />
+    <ui-search
+        placeholder="Поиск по названию картины"
+        @to-search="filterByName"
+    />
 </template>
 
 <script>

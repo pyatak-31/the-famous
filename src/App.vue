@@ -15,7 +15,3 @@
 		return defineAsyncComponent(() => import(`./layouts/${ route.meta.layout }Layout.vue`));
 	});
 </script>
-
-<style lang="scss">
-
-</style>

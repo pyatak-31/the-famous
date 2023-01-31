@@ -41,7 +41,12 @@
 
         &__list {
             display: flex;
-            gap: 48px;
+            flex-wrap: wrap;
+            gap: 20px;
+            
+            @media (min-width: 1170px) {
+                gap: 48px;
+            }
         }
 
        // &__item {}

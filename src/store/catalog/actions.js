@@ -1,3 +1,3 @@
 export default ({
-    loadList({ commit }) {}
+    // loadList({ commit }) {}
 });
