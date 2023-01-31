@@ -19,7 +19,7 @@
     </nav>
 </template>
 
-<script>export default { name: 'LayoutMainNav' }</script>
+<script>export default { name: 'LayoutMainNav' };</script>
 
 <script setup>
     const props = defineProps({
@@ -44,8 +44,7 @@
             gap: 48px;
         }
 
-        &__item {
-        }
+       // &__item {}
 
         &__link {
             @include font($dark, 14px, 21px, 400);
