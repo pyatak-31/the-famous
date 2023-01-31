@@ -6,24 +6,31 @@
         @click="onClick"   
     >
         <i
-            :class="iconClass"
-            v-if="hasLeftIcon"    
-        >
-            <slot name="left-icon"></slot>
-        </i>
+            v-if="loading"
+            class="button__loader"
+        ></i>
 
-        <slot />
-
-        <i
-            :class="iconClass"
-            v-if="hasRightIcon"    
-        >
-            <slot name="right-icon"></slot>
-        </i>
+        <template v-else>
+            <i
+                :class="iconClass"
+                v-if="hasLeftIcon"    
+            >
+                <slot name="left-icon"></slot>
+            </i>
+    
+            <slot />
+    
+            <i
+                :class="iconClass"
+                v-if="hasRightIcon"    
+            >
+                <slot name="right-icon"></slot>
+            </i>
+        </template>
     </button>
 </template>
 
-<script>export default { name: 'UiButton' }</script>
+<script>export default { name: 'UiButton' };</script>
 
 <script setup>
     import { useSlots, computed } from 'vue';
@@ -31,6 +38,7 @@
     const props = defineProps({
         type: { type: String, default: 'button' },
         disabled: Boolean,
+        loading: Boolean,
     });
     
     const emit = defineEmits(['onClick']);
@@ -67,11 +75,13 @@
 
 <style scoped lang="scss">
     .button {
+        position: relative;
         display: flex;
         align-items: center;
         justify-content: center;
         padding: 14px 28px;
         @include font($white, 14px, 21px, 700);
+        white-space: nowrap;
         background-color: $primary;
         transition: background-color .3s;
 
@@ -98,5 +108,24 @@
                 margin-right: 4px;
             }
         }
+
+        &__loader {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 4px solid $white;
+            border-bottom-color: transparent;
+            border-radius: 50%;
+            animation: rotation 1s linear infinite;
+        }
     }
+
+    @keyframes rotation {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    } 
 </style>

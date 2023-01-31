@@ -5,7 +5,7 @@
                 Картины эпохи Возрождения
             </ui-title>
             
-            <module-catalog-list />
+            <module-catalog-list class="catalog__list" />
         </app-container>
     </section>
 </template>
@@ -26,8 +26,13 @@
 </script>
 
 <style scoped lang="scss">
-    button {
-        background-color: $primary;
+    .catalog {
+        padding-top: 45px;
+        padding-bottom: 45px;
+
+        &__list {
+            margin-top: 39px;
+        }
     }
 
 </style>

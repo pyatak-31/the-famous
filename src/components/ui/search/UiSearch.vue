@@ -3,7 +3,9 @@
         <input
             type="text"
             class="search-panel__field"
+            v-bind="$attrs"
             v-model="searchValue"
+            @keypress.enter="toSearch"
         >
 
         <ui-button @on-click="toSearch">

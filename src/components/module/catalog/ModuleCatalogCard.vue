@@ -35,10 +35,10 @@
                     <ui-price :value="price" />
                 </div>
 
-                
                 <ui-button
                     class="catalog-card__in-cart-btn"
                     v-if="isInCart(id)"
+                    :loading="isLoading"
                     @on-click="removeFromCart(id)"    
                 >
                     <template #left-icon>
@@ -48,7 +48,9 @@
                 </ui-button>
 
                 <ui-button
+                    class="catalog-card__btn"
                     v-else
+                    :loading="isLoading"
                     @on-click="addToCart(id)"
                 >
                     Купить
@@ -87,7 +89,7 @@
         image: String,
         saled_status: String,
     });
-    const { isInCart, addToCart, removeFromCart } = useCart();
+    const { isLoading, isInCart, addToCart, removeFromCart } = useCart();
 </script>
 
 <style lang="scss" scoped>
@@ -135,8 +137,18 @@
         }
 
         &__in-cart-btn {
+            min-width: 118px;
+            min-height: 48px;
+            max-height: 48px;
             padding: 14px 8px;
             background-color: #5b3a32;
+        }
+
+        &__btn {
+            min-width: 118px;
+            min-height: 48px;
+            max-height: 48px;
+
         }
     }
 </style>

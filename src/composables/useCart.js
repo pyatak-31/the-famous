@@ -1,19 +1,28 @@
-import { computed } from "vue";
+import { computed, ref } from "vue";
 import { useStore } from "vuex";
 
 export const useCart = () => {
     const store = useStore();
 
+    const isLoading = ref(false);
     const cartCount = computed(() => store.getters['cart/cartCount']);
     const isInCart = computed((id) => store.getters['cart/isInCart']);
 
-    const addToCart = (id) => {
-        store.commit('cart/addToCart', id);
+    const addToCart = async (id) => {
+        isLoading.value = true;
+        const answer = await store.dispatch('cart/addToCart', id);
+        console.log(answer);
+        isLoading.value = false;
+        alert(answer);
     };
 
-    const removeFromCart = (id) => {
-        store.commit('cart/removeFromCart', id);
+    const removeFromCart = async (id) => {
+        isLoading.value = true;
+        const answer = await store.dispatch('cart/removeFromCart', id);
+        console.log(answer);
+        isLoading.value = false;
+        alert(answer);
     };
 
-    return { cartCount, isInCart, addToCart, removeFromCart };
+    return { isLoading, cartCount, isInCart, addToCart, removeFromCart };
 };
