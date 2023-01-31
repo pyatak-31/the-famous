@@ -31,7 +31,7 @@ export default ({
             name: 'Урок анатомии',
             author: 'Рембрандт',
             image: 'rembrandt',
-            saledStatus: 'Продана на аукционе',
+            saled_status: 'Продана на аукционе',
         },
     ],
 

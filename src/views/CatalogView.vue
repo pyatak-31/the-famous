@@ -5,20 +5,22 @@
                 Картины эпохи Возрождения
             </ui-title>
             
+            <module-catalog-list />
         </app-container>
     </section>
 </template>
 
 <script>
     import AppContainer from '@/components/app/container/AppContainer.vue';
-    import { ref } from 'vue';
-import UiTitle from '@/components/ui/title/UiTitle.vue';
+    import ModuleCatalogList from '@/components/module/catalog/ModuleCatalogList.vue';
+    import UiTitle from '@/components/ui/title/UiTitle.vue';
 
     export default {
         name: 'CatalogView',
         components: {
             AppContainer,
-                UiTitle,
+            ModuleCatalogList,
+            UiTitle,
         }          
     }
 </script>

@@ -72,7 +72,6 @@
         justify-content: center;
         padding: 14px 28px;
         @include font($white, 14px, 21px, 700);
-        text-transform: capitalize;
         background-color: $primary;
         transition: background-color .3s;
 

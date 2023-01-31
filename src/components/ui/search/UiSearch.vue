@@ -7,9 +7,6 @@
         >
 
         <ui-button @on-click="toSearch">
-            <!-- <template #left-icon>
-                <ui-icon name="cart" />
-            </template> -->
             Найти
         </ui-button>
     </div>
