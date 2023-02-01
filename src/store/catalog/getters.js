@@ -4,7 +4,7 @@ export default ({
             return state.list
                 .filter(item => item.name
                     .toLowerCase()
-                    .includes(state.filterValue));
+                    .includes(state.filterValue.toLowerCase()));
         } else {
             return state.list;
         }

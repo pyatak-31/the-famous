@@ -139,8 +139,8 @@
             min-width: 118px;
             min-height: 48px;
             max-height: 48px;
-            padding: 14px 8px;
-            background-color: #5b3a32;
+            padding: 14px 8px !important;
+            background-color: #5b3a32 !important;
         }
 
         &__btn {
